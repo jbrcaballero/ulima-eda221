@@ -1,0 +1,15 @@
+a) Lineal. Se observa dependencia de "n", pero no se observan potencias.
+
+b) Polinomial: Por el exponente 2 en 3n^2.
+
+c) Exponencial: A diferencia de la anterior, el valor de "n" aparece en el exponente.
+
+d) Exponencial: Similar al anterior.
+
+c) Constante: No aparece el valor de "n".
+
+d) Constante: Similar al anterior.
+
+e) Lineal: El coeficiente fraccionario no tiene impacto, se considera lineal.
+
+f) Polinomial: Por el exponente 3 que se presenta en el términ.

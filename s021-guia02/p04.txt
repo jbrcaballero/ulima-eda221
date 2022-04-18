@@ -1,0 +1,87 @@
+a) Similar a las anteriores. Al ser bucles independientes, debemos encontrar la cantidad de veces que corre cada uno y luego realizar la multiplicación.
+
+Primer bucle: El valor de "i" va desde 1 hasta "n" (inclusive). Por ello, vemos que ser el bucle se ejecutará "n" veces.
+
+Segundo bucle: El valor de "j" va desde 1 hasta n^2 (no lo incluye). Por lo tanto, se ejecutará n^2 - 1 veces.
+
+Con estos números podemos encontrar lo solicitado:
+
+T(n) = n * (n^2 - 1) = n^3 - n
+Complejidad: O(n^3)
+
+
+b) Este caso es diferente del anterior, ya que aquí observamos que la cantidad de ejecuciones del segundo bucle dependerá del primero. Observamos que en el segundo bucle, la cantidad de ejecuciones variará según el valor de j. Podemos ver esto detalladamente.
+
+Para j = 1 (primer bucle), el segundo bucle irá desde k = 1 hasta n (correrá n veces).
+
+Para j = 2, el segundo bucle irá desde k = 2 hasta n (correrá n-1 veces).
+
+Para j = 3, el segundo bucle irá desde k = 3 hasta n (correrá n-2 veces).
+
+Y así sucesivamente, veremos que para las última ejecución se tendrá:
+
+Para j = n, el segundo bucle irá desde k = n hasta n (correrá una sola vez).
+
+Para poder determinar la cantidad de veces que se va a ejecutar el código dentro del segundo bucle podemos sumar: n + (n-1) + (n-2) + ... + 2 + 1. Podemos invertir el número y veremos que se forma una sumatoria conocida (también se menciona al inicio de la guía). El resultado de esta suma será: n*(n+1)/2. De forma práctica, cuando encontremos expresiones como esta podemos concluir que esa será la cantidad de ejecuciones.
+
+Sin embargo, tenemos todavía un bucle más al interior. Como va desde 0 hasta 8 (no lo incluye), el bucle se ejecutará 8 veces. Como este bucle es independiente de los anteriores, puedo hallar el resultado final simplemente multiplicando.
+
+T(n) = (n * (n+1)/2) * 8 = 4n*(n+1) = 4n^2 + 4n
+Complejidad: O(n^2)
+
+
+c) Es un caso muy similar al anterior, solamente que no incluye el valor de n en los bucles. Tomando en cuenta el segundo bucle tendremos:
+
+Para i = 1, el segundo bucle se ejecutará n-1 veces (no se incluye a n).
+Para i = 2, el segundo bucle se ejecutará n-2 veces
+Para i = 3, el segundo bucle se ejecutará n-3 veces
+
+Y así sucesivamente, vemos que en la última iteración del primer bucle, el valor de i será igual a n-1.
+
+Para i = n-1, el segundo bucle se ejecutará una sola vez.
+
+Para poder determinar la cantidad de veces que se ejecuta sería (n-1) + (n-2) + (n-3) + ... + 2 + 1.
+Podemos aplicar la fórmula directamente. solamente que ahora iríamos hasta n-1 o podemos restarle n al resultado anterior. Con ello el resultado sería: (n-1)*n/2. Con ello sería:
+
+T(n) = n*(n-1)/2 = (n^2-n) / 2
+Complejidad: O(n^2)
+
+
+f) Cuando tenemos un valor de n que se va dividiendo, podemos tener una primera pista de que se trata de una complejidad logarítmica en esa parte del algoritmo. Para poder tener una mejor idea de lo que sucede podemos empezar probando con algunos valores.
+
+Por ejemplo, revisemos el caso de n=32.
+- En este caso , antes de ingresar al bucle, el valor de k es 32 también.
+-En cada paso el valor se va dividiendo entre 2.
+- Adicionalmente, por el primer bucle, cada operación debe realizarse n veces.
+
+El valor de k iría de esata forma:
+
+En la primera iteración, k = 32.
+En la segunda iteración, k = 16.
+En la tercera iteración, k = 8.
+En la cuarta iteración, k = 4.
+En la quinta iteración, k = 2.
+En la sexta iteración, k = 1.
+
+Como vemos, para nuestro ejemplo de 32, podemos ver que fue necesario log(32)+1 iteraciones en el bucle interior. Observamos una dependencia logarítmica
+De manera intuitiva podemos decir:
+	T(n) = n (logn+1)
+	T(n) = nlogn + n
+
+Complejidad: O(nlogn)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

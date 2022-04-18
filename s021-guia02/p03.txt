@@ -1,0 +1,36 @@
+a) Observamos que el bucle va desde cero hasta 200 (inclusive). Sin embargo, la cantidad de veces que se ejecuta el bucle y, por lo tanto, la cantidad de veces que se ejecuta la sentencia subrayada, no depende de "n". Podemos decir entonces que el bloque se va a ejecutar en tiempo constante.
+Para poder saber la cantidad específica de veces tenemos que ver cuántas veces se ejecuta el bucle. Así tendremos que ejecutaremos el bucle para los siguientes valores de i: 0, 1, 2, 3, 4, 5, ..., 200. Si fuera desde 1 hasta 200, entonces se ejecutaría 200 veces, tenemos que agregar el cero, con lo que se hace un total de 201 veces.
+Entonces quedaría:
+T(n) = 201
+Complejidad: O(1)
+
+
+b) De igual manera, debemos ver la cantidad de veces que se va a ejecutar el bucle. Para este caso va desde cero hasta n (inclusive). Con ello el bucle se ejecutará para valores de n: 0, 1, 2, 3, 4, ..., n. Cantidad de veces: n + 1. Vemos que en ese caso sí existe dependencia con respecto a "n", el tiempo de ejecución dependerá de forma lineal.
+
+T(n) = n + 1
+Complejidad: O(n)
+
+
+c) Esta vez observamos 2 bucles anidados. Si estos bucles no tienen dependencia (es decir, el bucle interno se ejecutará siempre la misma cantiad de veces), el resultado lo tendremos simplemente multiplicando.
+Vemos que el bucle externo (el que tiene que variable a "i") se ejecutará n + 1 veces (muy similar al ejemplo anterior). Para el caso del bucle interno (que tiene como variable a "j") será la misma cantidad de veces, ya que solo varía el nombre de la variable. Con ello quedaría de esta forma:
+
+T(n) = (n + 1) * (n + 1) = n^2 + 2n + 1
+Complejidad O(n^2)
+
+La razón por la que es una dependencia cuadrática tiene que ver con el mayor exponente que observamos en T(n). Al tener un exponente 2, este tendrá el mayor orden de crecimiento y servirá para determinar la complejidad del algoritmo en su totalidad.
+
+
+d) Este caso es muy similar, solo debemos tener cuidado al determinar la cantidad de veces que se ejecutará cada bucle y luego multiplicar el resultado (no existe dependencia).
+
+Primer bucle: Vamos desde 0 hasta 100 (no lo incluimos). Por lo tanto los valores que se tomará serán: 0, 1, 2, 3, ..., 99. Ello quiere decir que se evaluará 100 veces.
+
+Segundo bucle: Los valores de "j" van desde 1 hasta "n" (inclusive). Por lo tanto, se ejecutará "n" veces por cada iteración del primer bucle.
+
+Tercer bucle: Los valores de "k" van desde 1 hasta n^2 (no lo incluye). Por lo tanto, la cantidad de veces que se ejecutará será de n^2 - 1, por cada iteración del segundo bucle.
+
+Como hemos visto, el resultado lo obtendremos multiplicando:
+
+T(n) = 100 * (n) * (n^2 - 1) = 100n^3 - 100n
+Complejidad: O(n^3)
+
+Observamos que el exponente de mayor orden es 3, de ahí que podemos concluir que la complejidad será de O(n^3).

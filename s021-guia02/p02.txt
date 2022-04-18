@@ -1,0 +1,7 @@
+1 < n < n^2 < n^3 < (3/2)^n < 2^n
+
+La que crece de forma más lenta es la constante (valor 1). Aquí no hay crecimiento en realidad, no hay dependencia respecto de "n".
+
+A partir de allí tendremos funciones con crecimiento polinomial. El orden vendrá dado por el exponente de mayor valor asociado a "n". De allí que la de mayor crecimiento sea n^3.
+
+Finalmente, aparecen algunas funciones exponenciales. En ambos casos el exponente es "n", por lo que el crecimiento más rápido lo tendrá la función que tenga la mayor base, es decir, 2^n.
