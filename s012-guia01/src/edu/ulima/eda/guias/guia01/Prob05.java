@@ -18,6 +18,26 @@ public class Prob05 {
     */
     public static int[] getNumbers(int number){
         //Si el numero tiene 3 cifras
+        int n = 0;
+        
+        int contador = 3;
+        while(contador <= n){
+            contador = contador + 1;
+            for(int i = 0; i < 100; i++){
+                System.out.println(contador);
+            }
+        }
+        
+        for(int i = 0; i < n; i++){
+            for(int j = i; j < n; j++){
+                int k = 0;
+                while(k < n + 3){
+                    k = k + 2;
+                }
+            }
+        }
+        
+        
         int firstDigit = 0, secondDigit = 0, thirdDigit = 0;
         if(number >= 100){
             firstDigit = (number / 100) % 10;

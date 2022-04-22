@@ -1,0 +1,46 @@
+a)
+- El bucle externo: Se ejecutara (B-A) veces
+- En el interior tendremos varios algoritmos aplicados. El bloque mas pesado
+me determinara la complejidad del algoritmo completo.
+Tenemos que, el valor maximo que se evaluara para los algoritmos al interior
+del bucle es B (el bucle va desde A hasta B).
+Para cada uno de ellos tendremos:
+** Cuadrado perfecto: O(B^1/2)
+** Cubo Perfecto: O(B^1/3)
+** Cuatro cifras: O(1)
+** Contiene digito 7: O(log(B))
+
+De los 4, el de crecimiento mas rapido es el de cuadrado perfecto.
+Por lo tanto, la complejidad sera O((B-A)*B)
+
+b)
+        for(int i = 0; i < n; i++){
+            for(int j = i; j < n; j++){
+                int k = 0;
+                while(k < n + 3){
+                    k = k + 2;
+                    **********
+                }
+            }
+        }
+       
+Analizamos la cantidad de ejecuciones del segundo bucle (interior):
+i = 0 ->    j = 0, 1, 2, 3, 4, ..., n-1 (n veces)
+i = 1 ->    j = 1, 2, 3, 4, ..., n-1 (n-1 veces)
+i = 2 ->    j = 2, 3, 4, ..., n-1 (n-2 veces)
+....
+i = n-1 ->  j = n-1 (1 vez)
+
+Cada instruccion dentro del segundo bucle se ejecutar n*(n+1)/2 veces
+
+En el analisis del tercer bucle (while). Nos interesa relacionar la cantidad
+de veces que se ejecuta el bloque con el valor de n.
+Podemos probar con algunos valores:
+Para    n = 12
+        k = 0, 2, 4, 6, 8, 10, 12, 14
+
+Podemos decir que la cantidad de veces que se ejecutara sera aproximadamente
+(n+3)/2
+
+T(n) = n*(n+1)/2 * (n+3)/2
+Complejidad: O(n^3)
