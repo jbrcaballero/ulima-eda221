@@ -29,9 +29,12 @@ public class Prob09 {
     }
     
     public static int getMonthMoreSales(int[][] V){
+        //Representa el volumen de ventas maximo
         int max = 0;
+        //Representa el indice del mes con mayores ventas
         int maxIndex = 0;
         for(int i = 0; i < V.length; i ++){
+            //Permite acumular las ventas del mes
             int sum = 0;
             for(int j = 0; j < V[0].length; j++){
                 sum = sum + V[i][j];
@@ -48,7 +51,7 @@ public class Prob09 {
         String[] agencies = {"Trujillo", "Lima", "Tacna", "Cusco", "Piura"};
         int[][] V =     {
                             {300, 870, 430, 360, 380}, //enero
-                            {300, 870, 430, 360, 880}, //febrero
+                            {300, 870, 430, 360, 380}, //febrero
                             {360, 920, 430, 360, 380}, 
                             {300, 870, 430, 360, 380}, 
                             {300, 870, 430, 360, 380},
@@ -58,11 +61,12 @@ public class Prob09 {
                             {300, 870, 430, 360, 380}, 
                             {300, 870, 430, 360, 380}, 
                             {300, 870, 430, 360, 380}, 
-                            {300, 870, 430, 360, 380}                                                       
+                            {300, 870, 430, 360, 880}                                                       
                         };
-        
+        //Ventas de Trujillo: Ciudad con indice cero
         System.out.println(getSales(V, 0));
-        System.out.println(getSalesAverage(V, 3));
+        //Total de ventas diciembre -> month = 12
+        System.out.println(getSalesAverage(V, 12));
         System.out.println(getMonthMoreSales(V));
     }
 }
