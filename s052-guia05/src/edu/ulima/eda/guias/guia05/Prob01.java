@@ -27,7 +27,7 @@ class ListP01 extends LinkedList{
 }
 
 public class Prob01 {    
-    public static void main(String[] args){
+    public static void main(String[] args){        
         ListP01 list = new ListP01();
         list.addLast(10);
         list.addLast(344);

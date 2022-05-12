@@ -22,6 +22,8 @@ public class Prob02 {
         
         while(ptr1 != null && ptr2 != null){
             //Comparar elementos
+            //Caso 1: Listas son diferentes porque tienen elementos diferentes
+            //en la misma posicion
             if(ptr1.value() != ptr2.value()){
                 ans = false;
             }
@@ -29,6 +31,7 @@ public class Prob02 {
             ptr1 = ptr1.next();
             ptr2 = ptr2.next();            
         }
+        //Caso 2: Listas son diferentes porque tienen tamano diferente
         //Si los tamanos son diferentes, uno de ellos sera != null
         if(ptr1 != null || ptr2 != null){
             ans = false;
