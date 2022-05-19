@@ -6,6 +6,7 @@
 package edu.ulima.eda.eva.ee02;
 
 import edu.ulima.eda.listas.LinkedList;
+import edu.ulima.eda.listas.Node;
 
 /**
  *
@@ -13,7 +14,26 @@ import edu.ulima.eda.listas.LinkedList;
  */
 public class Prob03 {
     public static void showFailedPercentage(LinkedList L1, LinkedList L2){
-        //TODO: Implementar
+        Node ptr = L1.getL();
+        int numFailed = 0;
+        int totalStudents = 0;
+        while(ptr != null){
+            if(ptr.value() < 11){
+                numFailed = numFailed + 1;
+            }
+            totalStudents = totalStudents + 1;
+            ptr = ptr.next();
+        }
+        ptr = L2.getL();
+        while(ptr != null){
+            if(ptr.value() < 11){
+                numFailed = numFailed + 1;
+            }
+            totalStudents = totalStudents + 1;
+            ptr = ptr.next();
+        }
+        float failedPercentage = 100f * numFailed / totalStudents;
+        System.out.println("El porcentaje de desaprobados es: " + failedPercentage + " %");
     }
     
     public static void main(String[] args){

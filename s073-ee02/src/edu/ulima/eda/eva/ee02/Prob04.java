@@ -11,34 +11,46 @@ package edu.ulima.eda.eva.ee02;
  */
 
 class Point{
-    //TODO: Definir atributos
+    private int x;
+    private int y;
+
+    public int getX() {
+        return x;
+    }
     
+    public int getY() {
+        return y;
+    }   
     //crear
     public Point(int x, int y){
-        //TODO: Implementar
+        this.x = x;
+        this.y = y;
     }
     //moverDerecha
     public void moveRight(int value){
-        //TODO: Implementar
+        this.x = this.x + value;
     }
     
     //moverArriba
     public void moveUp(int value){
-        //TODO: Implementar
+        this.y = this.y + value;
     }
     
     //esOrigen
     public boolean isOrigin(){
-        boolean ans = false;
-        //TODO: Implementar
-        return ans;
+        if(this.x == 0 && this.y == 0){
+            return true;
+        }else{
+            return false;
+        }        
     }
     
     //distancia
-    public double getDistance(Point p){
-        double ans = 0;
-        //TODO: Implementar
-        return ans;
+    public double getDistance(Point p){        
+        int x1 = p.getX();
+        int y1 = p.getY();        
+        double distance = Math.sqrt(Math.pow(y1 - this.y, 2) + Math.pow(x1 - this.x, 2));
+        return distance;
     }
     
 }
@@ -57,7 +69,7 @@ public class Prob04 {
         System.out.println(p.isOrigin());
         
         //Definimos un segundo punto (4, 10)
-        Point p1 = new Point(4, 10);
+        Point p1 = new Point(0, 0);
         
         //Para saber la distancia entre p y p1 llamamos al metodo
         double distance = p.getDistance(p1);

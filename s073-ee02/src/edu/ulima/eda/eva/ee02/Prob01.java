@@ -12,7 +12,20 @@ package edu.ulima.eda.eva.ee02;
 public class Prob01 {
     public static float getFinalGrade(int[] grades){
         float finalGrade = 0;
-        //TODO: Implementar
+        int maxGradePart1 = 0;
+        int maxGradePart2 = 0;
+        for(int i = 0; i < grades.length; i++){
+            if(i < grades.length / 2){
+                if(grades[i] > maxGradePart1){
+                    maxGradePart1 = grades[i];
+                }
+            }else{
+                if(grades[i] > maxGradePart2){
+                    maxGradePart2 = grades[i];
+                }
+            }           
+        }
+        finalGrade = 1.0f * (maxGradePart1 + maxGradePart2) / 2;
         return finalGrade;
     }
     
