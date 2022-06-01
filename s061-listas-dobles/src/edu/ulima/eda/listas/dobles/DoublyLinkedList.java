@@ -12,12 +12,20 @@ package edu.ulima.eda.listas.dobles;
 public class DoublyLinkedList {
     private Node I;
     private Node F;
-    
+
     public DoublyLinkedList(){
         this.I = null;
         this.F = null;
     }
-    
+
+    public Node getI() {
+        return I;
+    }
+
+    public Node getF() {
+        return F;
+    }
+        
     public void addFirst(Integer value){
         Node newNode = new Node(value);
         newNode.setNext(I);        

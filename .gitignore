@@ -30,3 +30,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+# Google Drive
+/.tmp.driveupload
+**/desktop.ini

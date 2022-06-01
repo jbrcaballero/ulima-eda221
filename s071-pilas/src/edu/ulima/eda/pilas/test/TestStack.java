@@ -12,7 +12,7 @@ import edu.ulima.eda.pilas.Stack;
  * @author JC
  */
 public class TestStack {
-    
+    //Obtener la cantidad de ocurrencias de un elemento en la pila
     public static int countOcurrences(Stack s, int x){
         int count = 0;
         while(s.isEmpty() == false){
@@ -32,13 +32,10 @@ public class TestStack {
         s1.push(30);
         s1.push(12);
         s1.push(55);
-        s1.showElements();
-        
-        int x = s1.pop();
-        System.out.println("Elemento: " + x);
-        s1.showElements();
+        s1.showElements();                
         
         int ans = countOcurrences(s1, 12);
         System.out.println("Cant. apariciones: " + ans);
+        
     }
 }

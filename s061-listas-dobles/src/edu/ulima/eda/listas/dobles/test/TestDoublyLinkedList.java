@@ -27,6 +27,6 @@ public class TestDoublyLinkedList {
         
         list.show();
         list.showReverse();
-
+        
     }
 }
