@@ -14,13 +14,18 @@ import edu.ulima.eda.pilas.Stack;
 public class Prob08 {
     public static boolean equals(Stack s1, Stack s2){
         boolean ans = true;
+        //Creamos 2 pilas auxiliares, para almacenar los elementos de cada pila
         Stack aux1 = new Stack();
         Stack aux2 = new Stack();
+        
         while(ans == true && s1.isEmpty() == false && s2.isEmpty() == false){
+            //Extraemos el elemento de la cima en cada una de las pilas
             int element1 = s1.pop();
             int element2 = s2.pop();
+            //Almacenamos los elementos extraidos en las pilas auxiliares
             aux1.push(element1);
             aux2.push(element2);
+            //Comparamos los elementos
             if(element1 != element2){
                 ans = false;
             }
@@ -29,9 +34,6 @@ public class Prob08 {
         if(s1.isEmpty() == false || s2.isEmpty() == false){
             ans = false;
         }
-        //Agregar valores faltantes en las pilas auxiliares
-        Prob01.copyStack(s1, aux1);
-        Prob01.copyStack(s2, aux2);
         
         //Restaurar valores en las pilas originales
         Prob01.copyStack(aux1, s1);
@@ -47,10 +49,10 @@ public class Prob08 {
         s1.push(55);
         
         Stack s2 = new Stack();
-        s2.push(52);
-        s2.push(222);
-        s2.push(66);
-        s2.push(78);
+        s2.push(12);
+        s2.push(33);
+        s2.push(45);
+        s2.push(55);
         
         s1.showElements();
         s2.showElements();

@@ -22,7 +22,7 @@ public class Prob03 {
         //Copiamos elementos de s1 a s2 (estaran en el orden original)
         copyStack(s1, s2);
         //Copiamos elementos de s2 a la pila original (elementos estaran invertidos)
-        copyStack(s2, s);        
+        copyStack(s2, s);
     }
     
     public static void main(String[] args){
