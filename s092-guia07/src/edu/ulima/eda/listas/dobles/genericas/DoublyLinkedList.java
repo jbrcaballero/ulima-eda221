@@ -12,11 +12,11 @@ package edu.ulima.eda.listas.dobles.genericas;
 public class DoublyLinkedList<T>{
     private Node<T> I;
     private Node<T> F;
-
+    
     public Node<T> getI() {
         return I;
     }
-
+    
     public Node<T> getF() {
         return F;
     }

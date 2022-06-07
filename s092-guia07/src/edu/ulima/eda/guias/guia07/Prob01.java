@@ -24,6 +24,15 @@ class QueueP01 extends Queue{
 }
 
 public class Prob01 {
+    public static int countElements(Queue q){
+        int count = 0;
+        while(q.isEmpty() == false){
+            count++;
+            q.dequeue();
+        }
+        return count;
+    }
+    
     public static void main(String[] args) {
         QueueP01 q = new QueueP01();
         q.enqueue(12);
@@ -31,6 +40,6 @@ public class Prob01 {
         q.enqueue(36);
         q.enqueue(98);
         q.showElements();
-        System.out.println(q.count());
+        System.out.println("Cantidad de elementos: " + countElements(q));
     }
 }

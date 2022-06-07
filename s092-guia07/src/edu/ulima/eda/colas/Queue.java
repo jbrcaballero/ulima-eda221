@@ -13,7 +13,7 @@ public class Queue {
     protected int[] C;
     protected int front;
     protected int rear;
-    protected static final int MAX_SIZE = 2;
+    protected static final int MAX_SIZE = 100;
     
     public Queue(){
         C = new int[MAX_SIZE];

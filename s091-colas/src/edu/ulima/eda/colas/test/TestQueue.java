@@ -22,9 +22,8 @@ public class TestQueue {
         q1.showElements();
         
         while(q1.isEmpty() == false){
-            System.out.println(q1.dequeue());
+            System.out.println("Elemento: " + q1.dequeue());
         }
-        
         q1.showElements();
     }
 }
