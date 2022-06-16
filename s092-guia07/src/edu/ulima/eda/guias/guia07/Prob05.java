@@ -34,13 +34,15 @@ public class Prob05 {
         q1.enqueue(34);
         q1.enqueue(3);
         q1.enqueue(34);
+        q1.showElements();
         
         Queue q2 = new Queue();
         q2.enqueue(21);
         q2.enqueue(34);
         q2.enqueue(3);
         q2.enqueue(34);
-        q2.enqueue(14);
+        //q2.enqueue(14);
+        q2.showElements();
         
         System.out.println(equals(q1, q2));        
     }

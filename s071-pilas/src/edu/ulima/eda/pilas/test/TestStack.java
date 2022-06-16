@@ -25,7 +25,7 @@ public class TestStack {
     }
     
     
-    public static void main(String[] args){
+    public static void main(String[] args){        
         Stack s1 = new Stack();
         s1.push(12);
         s1.push(22);
