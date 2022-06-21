@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ulima.eda.evaluaciones.ee02.simulacro;
+package edu.ulima.eda.evaluaciones.ee03.simulacro;
 import edu.ulima.eda.colas.Queue;
 /**
  *

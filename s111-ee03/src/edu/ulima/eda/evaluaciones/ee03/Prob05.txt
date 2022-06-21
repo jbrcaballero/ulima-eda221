@@ -1,0 +1,3 @@
+Estructura elegida: Pilas.
+- Guardar partida: Utilizar la operación "push" para ir agregando elementos a la pila.
+- Cargar partida: Utilizar la operación "pop", que recuperará la partida más reciente que se haya guardado.
