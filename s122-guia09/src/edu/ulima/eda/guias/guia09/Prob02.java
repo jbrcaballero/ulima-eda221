@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ulima.eda.arboles.test;
+package edu.ulima.eda.guias.guia09;
 
 import edu.ulima.eda.arboles.Node;
 
@@ -11,39 +11,37 @@ import edu.ulima.eda.arboles.Node;
  *
  * @author JC
  */
-public class TestTree {
-    
+public class Prob02 {
     public static int count(Node root){
-        //Arbol vacio
+        //Caso base (arbol vacio)
         if(root == null){
             return 0;
         }else{
+            //Recursion
+            //1 (considerando la raiz) + cantidad de nodos(subarbol izq) + cantidad de nodos(subarbol der)
             return 1 + count(root.left()) + count(root.right());
         }
     }
     
-    
+
     public static void main(String[] args){
         /*
                     9
                   /   \
                  14   28
                 /  \    \
-               20  11    12        
-        */
+               20  11    12
         
-        //Crear el nodo raiz
+        */ 
+        
         Node root = new Node(9);
         
-        //Crear los hijos (nivel 1) 
         Node node2 = new Node(14);
         Node node3 = new Node(28);
         
-        //Actualizamos las referencias
         root.setLeft(node2);
         root.setRight(node3);
         
-        //Crear los hijos del Nodo de valor 14
         Node node4 = new Node(20);
         Node node5 = new Node(11);
         

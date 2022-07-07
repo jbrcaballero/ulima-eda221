@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ulima.eda.arboles.test;
+package edu.ulima.eda.guias.guia09;
 
 import edu.ulima.eda.arboles.Node;
 
@@ -11,15 +11,23 @@ import edu.ulima.eda.arboles.Node;
  *
  * @author JC
  */
-public class TestTree {
+public class Prob04 {
     
-    public static int count(Node root){
-        //Arbol vacio
-        if(root == null){
-            return 0;
+    public static boolean find(Node R, int X){
+        //Caso base: arbol vacio
+        if(R == null){
+            //Si el arbol esta vacio, el elemento no se encuentra
+            return false;                    
         }else{
-            return 1 + count(root.left()) + count(root.right());
+            //Si el elemento coincide con la raiz, se retorna verdadero (encontrado)
+            if(R.value() == X){
+                return true;
+            }else{
+                //Dos posibilidades: Puede estar en el subarbol izquierdo o en el derecho
+                return find(R.left(), X) || find(R.right(), X);
+            }
         }
+        
     }
     
     
@@ -29,21 +37,18 @@ public class TestTree {
                   /   \
                  14   28
                 /  \    \
-               20  11    12        
-        */
+               20  11    12
         
-        //Crear el nodo raiz
+        */ 
+        
         Node root = new Node(9);
         
-        //Crear los hijos (nivel 1) 
         Node node2 = new Node(14);
         Node node3 = new Node(28);
         
-        //Actualizamos las referencias
         root.setLeft(node2);
         root.setRight(node3);
         
-        //Crear los hijos del Nodo de valor 14
         Node node4 = new Node(20);
         Node node5 = new Node(11);
         
@@ -53,6 +58,6 @@ public class TestTree {
         Node node6 = new Node(12);        
         node3.setRight(node6);
         
-        System.out.println(count(root));
-    }
+        System.out.println(find(root, 12));
+    }        
 }
