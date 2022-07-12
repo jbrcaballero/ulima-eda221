@@ -17,12 +17,11 @@ public class Prob05 {
         //En caso contrario, se procesa el arbol
         if(root != null){
             //Verificamos si el nodo raiz tiene un solo hijo
-
-            //1) Verifico que el nodo no sea hoja
+            //1) Que el nodo no sea hoja
             if(root.left() != null || root.right() != null){
-                //2) Verifico que alguno de los 2 nodos tenga un valor nulo
+                //2) Que alguno de los 2 nodos tenga un valor nulo
                 if(root.left() == null || root.right() == null){
-                    System.out.println("El nodo " + root.value() + "tiene un solo hijo");
+                    System.out.println("El nodo " + root.value() + " tiene un solo hijo");
                 }
             }
             //Recursion: Procesar subarbol izquierdo y subarbol derecho
@@ -44,8 +43,8 @@ public class Prob05 {
                     9
                   /   \
                  14   28
-                /  \    \
-               20  11    12
+                /       \
+               20       12
         
         */ 
         
@@ -58,14 +57,12 @@ public class Prob05 {
         root.setRight(node3);
         
         Node node4 = new Node(20);
-        Node node5 = new Node(11);
         
         node2.setLeft(node4);
-        node2.setRight(node5);
         
         Node node6 = new Node(12);        
         node3.setRight(node6);
+        showOneChild(root);
         
-        //System.out.println(find(root, 12));
     }        
 }

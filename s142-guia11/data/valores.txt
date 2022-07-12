@@ -1,0 +1,5 @@
+cantidad 5
+mayor 12
+menor 3
+promedio 10.4
+ult_proceso 2019

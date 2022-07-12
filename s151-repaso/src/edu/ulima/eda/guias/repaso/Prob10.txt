@@ -1,0 +1,27 @@
+- Cantidad de vértices: 6
+- Cantidad de aristas: 10
+- Grado de los vértices:
+    - 1: 3
+    - 2: 3
+    - 3: 5
+    - 4: 3
+    - 5: 3
+    - 6: 3
+- Matriz de Adyacencias:
+
+    0   1   1   1   0   0
+    1   0   1   0   1   0
+    1   1   0   1   1   1
+    1   0   1   0   0   1
+    0   1   1   0   0   1
+    0   0   1   1   1   0
+
+
+- Listas de Adyacencias
+
+    1: 2 -> 3 -> 4
+    2: 1 -> 3 -> 5
+    3: 1 -> 2 -> 4 -> 5 -> 6
+    4: 1 -> 3 -> 6
+    5: 2 -> 3 -> 6
+    6: 3 -> 4 -> 5

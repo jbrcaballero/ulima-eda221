@@ -1,0 +1,7 @@
+Promedio general: 9.543604651162791
+Alumno mayor nota: Kristi Kaufman
+Mayor nota: 15.75
+Alumno menor nota: Noah Gilbertson
+Menor nota: 4.0
+Porcentaje aprobados: 23.25581395348837
+Porcentaje con nota >= prom: 48.837209302325576
